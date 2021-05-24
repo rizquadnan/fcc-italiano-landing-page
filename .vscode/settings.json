@@ -1,0 +1,4 @@
+// to enforce same required editor behavior
+{
+  "editor.formatOnSave": true
+}
