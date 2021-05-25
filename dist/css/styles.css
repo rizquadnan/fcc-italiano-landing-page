@@ -2,14 +2,24 @@ html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-color: orangered;
 }
 
-*, *::before, *::after {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
 
-a, a:visited, a:hover {
+a,
+a:visited,
+a:hover {
   text-decoration: none;
 }
 
@@ -17,5 +27,41 @@ ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+.container {
+  padding: 0 1.25rem;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 1rem;
+}
+
+.header__hamburger > span {
+  display: block;
+  width: 1.25rem;
+  height: 2px;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+}
+
+.header__hamburger > span:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
+.header__logo {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.header__cart {
+  display: block;
+  width: 1.5rem;
+  height: 1.125rem;
+  margin-left: auto;
+  background-color: #ffffff;
 }
 /*# sourceMappingURL=styles.css.map */
