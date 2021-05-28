@@ -8,6 +8,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
 *,
@@ -29,15 +30,81 @@ ul {
   margin: 0;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .container {
   padding: 0 1.25rem;
 }
 
-.header {
+.flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.flex.jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex.jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex.ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #67080b;
+}
+
+@media (min-width: 64em) {
+  .header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.header__logo {
+  display: inline-block;
+  margin-left: 1rem;
+  width: 4.5rem;
+  -webkit-transform: translateY(0.125rem);
+          transform: translateY(0.125rem);
+}
+
+@media (min-width: 64em) {
+  .header__logo {
+    margin-left: 0;
+  }
 }
 
 .header__hamburger > span {
@@ -52,16 +119,46 @@ ul {
   margin-bottom: 0.25rem;
 }
 
-.header__logo {
-  display: inline-block;
-  margin-left: 1rem;
+.header__nav {
+  margin-left: auto;
+}
+
+.header__nav ul li {
+  display: inline;
+}
+
+.header__nav ul li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+@media (min-width: 64em) {
+  .header__nav {
+    display: block;
+  }
+}
+
+.header__nav-item,
+.header__nav-item:visited .header__nav-tiem:active {
+  padding: 0.25em 0;
+  color: #ffffff;
 }
 
 .header__cart {
-  display: block;
+  height: 1.5rem;
   width: 1.5rem;
-  height: 1.125rem;
   margin-left: auto;
-  background-color: #ffffff;
+  color: #ffffff;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 25vh;
+  z-index: 2;
+  background-color: #000000;
+  border-radius: 0 0 15rem 15rem;
+  opacity: 0.94;
 }
 /*# sourceMappingURL=styles.css.map */

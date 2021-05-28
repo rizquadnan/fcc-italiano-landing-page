@@ -1,6 +1,25 @@
 .header {
-  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: $z-index-header;
   padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #67080b;
+
+  @include breakpoint-up(large) {
+    justify-content: center;
+  }
+
+  &__logo {
+    display: inline-block;
+    margin-left: 1rem;
+    width: 4.5rem;
+    transform: translateY(0.125rem);
+
+    @include breakpoint-up(large) {
+      margin-left: 0;
+    }
+  }
 
   &__hamburger {
     > span {
@@ -16,16 +35,32 @@
     }
   }
 
-  &__logo {
-    display: inline-block;
-    margin-left: 1rem;
+  &__nav {
+    margin-left: auto;
+
+    ul li {
+      display: inline;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+
+    @include breakpoint-up(large) {
+      display: block;
+    }
+  }
+
+  &__nav-item,
+  &__nav-item:visited &__nav-tiem:active {
+    padding: 0.25em 0;
+    color: $white;
   }
 
   &__cart {
-    display: block;
+    height: 1.5rem;
     width: 1.5rem;
-    height: 1.125rem;
     margin-left: auto;
-    background-color: $white;
+    color: $white;
   }
 }

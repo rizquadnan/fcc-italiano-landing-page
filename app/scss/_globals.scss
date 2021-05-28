@@ -7,6 +7,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
 *,
@@ -27,6 +28,39 @@ ul {
   margin: 0;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .container {
   padding: 0 1.25rem;
+}
+
+.flex {
+  display: flex;
+
+  &.jc-sb {
+    justify-content: space-between;
+  }
+
+  &.jc-c {
+    justify-content: center;
+  }
+
+  &.ai-c {
+    align-items: center;
+  }
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
 }

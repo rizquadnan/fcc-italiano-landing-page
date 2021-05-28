@@ -1,0 +1,12 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 25vh;
+  z-index: $z-index-mobile-menu;
+  background-color: $mobile-menu-background-color;
+  border-radius: 0 0 $mobile-menu-border-radius
+    $mobile-menu-border-radius;
+  opacity: $mobile-menu-opacity;
+}
